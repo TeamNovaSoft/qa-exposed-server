@@ -1,0 +1,9 @@
+
+
+Introducing Repo Manager, a powerful tool that simplifies the process of managing your repositories. With our intuitive interface and easy-to-use features, you can easily change branches, run automated tests, and define actions to be run per repository.
+
+Our developers are excited about the ability to define the correct branches and wait for the actions to run without having to worry about slow machines or internet connectivity issues. This tool is perfect for teams that want to streamline their workflow and improve productivity.
+
+We understand that some of our users may have limited experience with GitHub, so we've designed this tool to be user-friendly and accessible to everyone. Our tool only works with the configuration TOML and valid terminal scripts in bash, which means you can easily integrate it with your existing workflows and tools.
+
+In addition, we've made sure that our tool is easy to set up and use, so you can get started quickly and start enjoying the benefits of a centralized server for testing and repository management. We're confident that Repo Manager will be a valuable asset to your team and help you streamline your workflows.
