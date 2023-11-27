@@ -1,57 +1,59 @@
 #  Scope of the project and the specific features that will be implemented
 
-The GitHub Repo Manager is a web application that allows users to manage their GitHub repositories. It provides a user-friendly interface for managing various aspects of a repository, such as branches, tags, and releases. The app also includes features like action running, which allows users to run scripts or commands on the repository, authentication and authorization, which ensures that only authorized users can access the repository, responsive design, which makes the app easy to use on different devices, accessibility, which ensures that the app is accessible to users with disabilities, error handling, which helps to identify and resolve any errors that may occur during the usage of the app, testing, which allows developers to test their code before deploying it to production, and deployment, which allows developers to easily deploy their code to a production environment.
-
-The GitHub Repo Manager is designed to be easy to use and provides a range of features that make it an effective tool for managing GitHub repositories. It is available as a web application and can be accessed from any device with an internet connection.
+The Repo Manager is a straightforward web application that empowers developers to manage the project's repositories with ease. Its user-friendly interface simplifies various repository management tasks, including changing branches and executing custom scripts or commands.
 
 - [Scope of the project and the specific features that will be implemented](#scope-of-the-project-and-the-specific-features-that-will-be-implemented)
   - [Scope](#scope)
   - [Features](#features)
   - [Users](#users)
+  - [Out of Scope Items](#out-of-scope-items)
 
 
 ## Scope
-  The scope of the project is to create a web-based application that allows users to manage their GitHub repositories. The application should provide a user-friendly interface for managing various aspects of a repository, such as branches, tags, and releases.
+
+The GitHub Repo Manager should provide developers with a streamlined user experience when managing their repositories. It should include features like action running, user-defined actions, authentication and authorization, responsive design, accessibility, error handling, and testing. It should not directly integrate with GitHub, support private repositories, include CI/CD functionality, have a full-blown code editor, provide issue tracking and bug reporting, include real-time collaboration features, have third-party integrations, or have customizable themes and layouts.
 
 ## Features
 
-The features of the application are:
-
-1. User authentication and authorization: The app should allow only authorized users to access the repository.
-2. Branch switching: Users should be able to switch between different branches in the repository.
-3. Action running: Users should be able to run scripts or commands on the repository.
-4. Responsive design: The app should be easy to use and accessible on different devices.
-5. Accessibility: The app should be accessible to users with disabilities.
-6. Error handling: The app should be able to identify and resolve any errors that may occur during usage.
-7. Testing: The app should allow developers to test their code before deploying it to production.
-8. Deployment: The app should allow developers to easily deploy their code to a production environment.
-
-The application should be designed with a user-friendly interface and should provide a range of features that make it an effective tool for managing GitHub repositories.
+- Action Running: Execute scripts or commands directly within the repository.
+- User-defined Actions: Define and run custom actions tailored to specific repository management needs.
+- Authentication and Authorization: Restrict access to authorized users only, ensuring secure repository management.
+- Responsive Design: Seamlessly adapt to various devices for convenient access.
+- Accessibility: Ensure usability for users with disabilities, promoting inclusivity.
+- Error Handling: Promptly identify and resolve any errors that may arise during usage.
+- Testing: Facilitate code testing before deployment to production environments.
 
 ## Users
 
-
 Developers:
 
-- Developers can use the tool to manage their code changes and collaborate with other team members.
-- They can create a new branch for each feature or bug fix they are working on, and then push their changes to that branch.
-- They can also switch between different branches to see how their changes affect the codebase.
-- Developers can use the tool to run automated tests and check if their changes have broken any existing functionality.
-- If there are any issues found during testing, developers can use the tool to report them back to QA for further investigation.
-- Once a feature or bug fix is complete, developers can merge their branch into the main branch using the tool.
+- Efficient Code Change Management: Developers can seamlessly manage their code changes and collaborate effectively with team members using the Repo Manager tool.
+- Branching and Merging: Create isolated branches for each feature or bug fix, push changes to respective branches, and effortlessly switch between branches to evaluate codebase modifications.
+- Automated Testing: Utilize the tool to execute automated tests and verify the integrity of code changes, ensuring no existing functionality is compromised.
+- Issue Tracking and Reporting: Identify and report any testing-related issues back to QA for further investigation, facilitating efficient troubleshooting.
 
 QA:
 
-- QA can use the tool to review changes made by developers and ensure that they meet the requirements of the product.
-- They can follow instructions left by developers to check if the branch has the required changes for a certain ticket or found any bugs and report them back to developers.
-- QA can also use the tool to run automated tests on the codebase to identify any issues before it is released to customers.
-- If there are any issues found during testing, QA can use the tool to report them back to developers for further investigation.
+- Comprehensive Code Review: QA testers can thoroughly review code changes made by developers, ensuring they align with product requirements and specifications.
+- Instruction-Guided Testing: Follow detailed instructions left by developers to verify the presence of required changes for specific tickets, effectively identifying any potential bugs.
+- Automated Testing Execution: Utilize the Repo Manager tool to run automated tests on the codebase, proactively identifying potential issues before customer release.
+- Issue Reporting and Collaboration: With this tool, QA can expedite the testing process, providing quick feedback to developers about bugs or required changes.
 
 Product Managers:
 
-- Product managers can use the tool to review changes made by developers and ensure that they meet the requirements of the product.
-- They can also use the tool to see the results of the latest work on certain branches or in the main branch, which can help them make informed decisions about the direction of the product.
-- Product managers can use the tool to review the codebase and identify any issues or areas for improvement.
-- If there are any issues found during testing, product managers can use the tool to report them back to developers for further investigation.
+- Product Requirements Alignment: Product managers can thoroughly review code changes made by developers, ensuring adherence to product requirements and specifications.
+- Real-time Progress Monitoring: Gain real-time insights into the latest work on specific branches or the main branch, enabling informed decision-making regarding product direction.
+- Issue Tracking and Resolution: Collaborate with developers to address any issues identified during testing, ensuring timely resolution and product quality.
+- QA Support: Product managers can also contribute to QA efforts by performing smoke tests, verifying requirements, and assisting in testing activities when needed. Additionally, they can review the frontend preview to ensure features align with expectations or report any issues independently.
 
-Overall, this tool would provide a streamlined way for developers, QA, and product managers to collaborate on code changes, review changes made by others, and ensure that the codebase meets the requirements of the product.
+
+## Out of Scope Items
+
+- Direct integration with GitHub: The GitHub Repo Manager should not directly integrate with GitHub's API. Instead, it should use a separate API layer to communicate with GitHub. This will make the application more flexible and easier to test.
+- Support for private repositories: The GitHub Repo Manager should initially only support public repositories. Support for private repositories can be added in a future release.
+- Continuous integration and deployment (CI/CD): The GitHub Repo Manager should not include built-in CI/CD functionality. This can be handled by separate tools like Jenkins or Travis CI.
+- Full-blown code editor: The GitHub Repo Manager should not include a fully functional code editor. It should only provide basic code editing capabilities for simple tasks.
+- Issue tracking and bug reporting: The GitHub Repo Manager should not include a built-in issue tracking system. This can be handled by separate tools like GitHub Issues or Jira.
+- Real-time collaboration features: The GitHub Repo Manager should not include real-time collaboration features like live editing or code sharing. These features can be implemented in a future release.
+- Third-party integrations: The GitHub Repo Manager should initially focus on its core functionalities and should not include integrations with third-party services. These integrations can be added in a future release.
+- Customizable themes and layouts: The GitHub Repo Manager should initially have a fixed theme and layout. Customizable themes and layouts can be added in a future release.
