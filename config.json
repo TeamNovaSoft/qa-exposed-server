@@ -2,25 +2,25 @@
     "repositories": [
         {
             "name": "client",
-            "location": "",
+            "location": "/home/israel-laguan/www/client",
             "mainBranch": "master",
             "exposedUrl": ""
         },
         {
             "name": "server",
-            "location": "",
+            "location": "/home/israel-laguan/www/server",
             "mainBranch": "master",
             "exposedUrl": ""
         },
         {
             "name": "gaming-services",
-            "location": "",
+            "location": "/home/israel-laguan/www/gaming-service",
             "mainBranch": "master",
             "exposedUrl": ""
         },
         {
             "name": "admin",
-            "location": "",
+            "location": "/home/israel-laguan/www/admin",
             "mainBranch": "master",
             "exposedUrl": ""
         }
