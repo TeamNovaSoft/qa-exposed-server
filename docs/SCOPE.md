@@ -11,7 +11,7 @@ The Repo Manager is a straightforward web application that empowers developers t
 
 ## Scope
 
-The GitHub Repo Manager should provide developers with a streamlined user experience when managing their repositories. It should include features like action running, user-defined actions, authentication and authorization, responsive design, accessibility, error handling, and testing. It should not directly integrate with GitHub, support private repositories, include CI/CD functionality, have a full-blown code editor, provide issue tracking and bug reporting, include real-time collaboration features, have third-party integrations, or have customizable themes and layouts.
+A web-based tool that allows non-technical users, developers, and QA to easily interact with different branches in multiple repositories, triggering actions such as pulling changes, changing branches, and previewing features.
 
 ## Features
 
@@ -28,32 +28,31 @@ The GitHub Repo Manager should provide developers with a streamlined user experi
 Developers:
 
 - Efficient Code Change Management: Developers can seamlessly manage their code changes and collaborate effectively with team members using the Repo Manager tool.
-- Branching and Merging: Create isolated branches for each feature or bug fix, push changes to respective branches, and effortlessly switch between branches to evaluate codebase modifications.
+- Branching: Devs can create isolated branches for each feature or bug fix, push changes to respective branches, and effortlessly switch between branches to evaluate codebase modifications.
 - Automated Testing: Utilize the tool to execute automated tests and verify the integrity of code changes, ensuring no existing functionality is compromised.
 - Issue Tracking and Reporting: Identify and report any testing-related issues back to QA for further investigation, facilitating efficient troubleshooting.
 
 QA:
 
-- Comprehensive Code Review: QA testers can thoroughly review code changes made by developers, ensuring they align with product requirements and specifications.
+- Comprehensive Review: QA testers can thoroughly review code changes made by developers, ensuring they align with product requirements and specifications.
 - Instruction-Guided Testing: Follow detailed instructions left by developers to verify the presence of required changes for specific tickets, effectively identifying any potential bugs.
 - Automated Testing Execution: Utilize the Repo Manager tool to run automated tests on the codebase, proactively identifying potential issues before customer release.
-- Issue Reporting and Collaboration: With this tool, QA can expedite the testing process, providing quick feedback to developers about bugs or required changes.
+- Bug Finding and Collaboration: With this tool, QA can expedite the testing process, providing quick feedback to developers about bugs or required changes.
 
 Product Managers:
 
 - Product Requirements Alignment: Product managers can thoroughly review code changes made by developers, ensuring adherence to product requirements and specifications.
 - Real-time Progress Monitoring: Gain real-time insights into the latest work on specific branches or the main branch, enabling informed decision-making regarding product direction.
-- Issue Tracking and Resolution: Collaborate with developers to address any issues identified during testing, ensuring timely resolution and product quality.
+- Progress Tracking and Resolution: Collaborate with developers to address any issues identified during testing, ensuring timely resolution and product quality.
 - QA Support: Product managers can also contribute to QA efforts by performing smoke tests, verifying requirements, and assisting in testing activities when needed. Additionally, they can review the frontend preview to ensure features align with expectations or report any issues independently.
 
 
 ## Out of Scope Items
 
-- Direct integration with GitHub: The GitHub Repo Manager should not directly integrate with GitHub's API. Instead, it should use a separate API layer to communicate with GitHub. This will make the application more flexible and easier to test.
-- Support for private repositories: The GitHub Repo Manager should initially only support public repositories. Support for private repositories can be added in a future release.
-- Continuous integration and deployment (CI/CD): The GitHub Repo Manager should not include built-in CI/CD functionality. This can be handled by separate tools like Jenkins or Travis CI.
-- Full-blown code editor: The GitHub Repo Manager should not include a fully functional code editor. It should only provide basic code editing capabilities for simple tasks.
-- Issue tracking and bug reporting: The GitHub Repo Manager should not include a built-in issue tracking system. This can be handled by separate tools like GitHub Issues or Jira.
-- Real-time collaboration features: The GitHub Repo Manager should not include real-time collaboration features like live editing or code sharing. These features can be implemented in a future release.
-- Third-party integrations: The GitHub Repo Manager should initially focus on its core functionalities and should not include integrations with third-party services. These integrations can be added in a future release.
-- Customizable themes and layouts: The GitHub Repo Manager should initially have a fixed theme and layout. Customizable themes and layouts can be added in a future release.
+- Direct integration with GitHub: The Repo Manager should not directly integrate with GitHub's API. Instead, it should use a separate API layer to communicate with GitHub. This will make the application more flexible and easier to test.
+- Continuous integration and deployment (CI/CD): The Repo Manager should not include built-in CI/CD functionality. This can be handled by separate tools like Jenkins or Travis CI.
+- Full-blown code editor: The Repo Manager should not include a fully functional code editor.
+- Issue tracking and bug reporting: The Repo Manager should not include a built-in issue tracking system. This can be handled by separate tools like GitHub Issues or Jira.
+- Real-time collaboration features: The Repo Manager should not include real-time collaboration features like live editing or code sharing.
+- Third-party integrations: The Repo Manager should initially focus on its core functionalities and should not include integrations with third-party services.
+- Customizable themes and layouts: The Repo Manager should initially have a fixed theme and layout. Customizable themes and layouts can be added in a future release.
