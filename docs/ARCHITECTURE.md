@@ -35,7 +35,7 @@
 
 ## I. Introduction
 
-The Repo Manager is a web-based application designed to empower users in efficiently managing their repositories. It offers a user-friendly interface for handling different aspects of a repository, including branches. The application allows users to define actions on a configuration file, and the project executes those actions. This approach aims to streamline the app's functionality and avoid scope creep.
+EasyEnvPreview is a web-based application designed to empower users in efficiently managing their repositories. It offers a user-friendly interface for handling different aspects of a repository, including branches. The application allows users to define actions on a configuration file, and the project executes those actions. This approach aims to streamline the app's functionality and avoid scope creep.
 
 Project Goals:
 
@@ -48,7 +48,7 @@ Project Goals:
 
 ## Description of the target audience and their needs
 
-With Repo Manager, developers easily handle code changes and collaborate through a user-friendly interface.
+With EasyEnvPreview, developers easily handle code changes and collaborate through a user-friendly interface.
 
 Developers use the tool to create branches for features or bug fixes, pushing changes, and switching between branches to assess their impact. They run automated tests, report issues to QA for further investigation, and ensure the codebase remains organized.
 
@@ -56,7 +56,7 @@ QA reviews developer changes, ensuring they meet product requirements. They foll
 
 Product managers review code changes, ensuring alignment with product requirements. They monitor branch progress, aiding informed decisions, and use the tool for issue reporting.
 
-Repo Manager streamlines collaboration, code review, and product alignment for developers, QA, and product managers. Its user-friendly design and essential features enhance team workflows and collaboration.
+EasyEnvPreview streamlines collaboration, code review, and product alignment for developers, QA, and product managers. Its user-friendly design and essential features enhance team workflows and collaboration.
 
 For more information cheeck [user's scope](./SCOPE.md#users).
 
