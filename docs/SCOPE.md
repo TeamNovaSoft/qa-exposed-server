@@ -56,3 +56,4 @@ Product Managers:
 - Real-time collaboration features: EasyEnvPreview should not include real-time collaboration features like live editing or code sharing.
 - Third-party integrations: EasyEnvPreview should initially focus on its core functionalities and should not include integrations with third-party services.
 - Customizable themes and layouts: EasyEnvPreview should initially have a fixed theme and layout. Customizable themes and layouts can be added in a future release.
+- This project doesn't have access or manage keys, passwords or anything related to security, if this is not configured properly the project just error, and the user solves that issues.

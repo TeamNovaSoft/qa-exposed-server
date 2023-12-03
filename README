@@ -1,9 +1,100 @@
+# EasyEnvPreview
 
-
-Introducing EasyEnvPreview, a powerful tool that simplifies the process of managing your repositories. With our intuitive interface and easy-to-use features, you can easily change branches, run automated tests, and define actions to be run per repository.
+Introducing EasyEnvPreview, a web application focused on enabling developers and QA engineers to easily switch Git branches and run tests across multiple repositories to validate code changes.
 
 Our developers are excited about the ability to define the correct branches and wait for the actions to run without having to worry about slow machines or internet connectivity issues. This tool is perfect for teams that want to streamline their workflow and improve productivity.
 
 We understand that some of our users may have limited experience with GitHub, so we've designed this tool to be user-friendly and accessible to everyone. Our tool only works with the configuration TOML and valid terminal scripts in bash, which means you can easily integrate it with your existing workflows and tools.
 
-In addition, we've made sure that our tool is easy to set up and use, so you can get started quickly and start enjoying the benefits of a centralized server for testing and repository management. We're confident that Repo Manager will be a valuable asset to your team and help you streamline your workflows.
+The core goal is to provide a robust server environment where users can switch Git branches, execute tests, and preview dynamic renditions of the codebase. This alleviates issues with slow local machines and networks.
+
+The target users are primarily members of QA teams, with an expected 2-10 repositories connected, each with around 5 branches typically.
+
+Key features include branch switching, test running, and dynamic previews. Custom terminal commands can also be configured as actions. The app uses a separate API layer instead of direct GitHub integration.
+
+Sessions expire after 15 minutes to 2 hours of inactivity. Strict data privacy practices are followed, with no PII collected or stored. Logging is to local text files, with a basic health check endpoint for monitoring.
+
+In addition, we've made sure that our tool is easy to set up and use, so you can get started quickly and start enjoying the benefits of a centralized server. We're confident that EasyEnvPreview will be a valuable asset to your team and help you streamline your workflows.
+
+## Best Practices for Defining Actions
+
+When creating custom actions to execute via EasyEnvPreview, keep in mind the following best practices:
+
+- Avoid hardcoding secrets or passwords: Any sensitive credentials should be passed in via environment variables or key management services. Hardcoded secrets in scripts risk exposure.
+- Limit filesystem access: Scripts should not erase files or modify filesystem locations outside of the repository workspace. This prevents unintended changes.
+- Sanitize user input: If accepting input from the UI, validate and sanitize to prevent injection of arbitrary code.
+- Follow least privilege principles: Each script should have the minimum permissions necessary to do its job. Avoid overprivileged actions.
+- Do not log sensitive information: Avoid logging personal data, API keys, access tokens, or other confidential information.
+- Use timeout limits: Scripts running too long can overloaded shared resources. Use timeouts, rate limiting, throttling.
+- Validate return codes: Check return codes of commands and handle failures appropriately.
+- Consider dependencies: Will scripts require additional languages, packages, or libraries to run successfully?
+- Plan for contingencies: Have an error handling strategy for crashes, hangs, exceptions. Log enough for diagnostics.
+- Comment properly: Use comments to document the script’s purpose, author, dependencies, changes etc.
+
+## Using the UI
+
+EasyEnvPreview allows QA testers and other non-technical users to validate branches without coding knowledge. Here is a step-by-step example:
+
+- Login to the EasyEnvPreview dashboard.
+- Locate the "Server" repository card and click the "Change Branch" dropdown menu.
+- Select the feat123-server branch specified by the developer.
+- Repeat steps 2-3 to switch the "Client" repository to the feat123-client branch.
+- Find the "Run Locally" action for the Server repository and click the "Run" button.
+- Similarly, run the "Run Locally" action for the Client repository.
+- On the Client repo, click the "Preview" action's "Run" button.
+- Once the "Preview" action finishes, copy the URL from the response shown on the card.
+- Paste that URL into your browser to view the application running from those feature branches.
+- You can now validate, test, and provide feedback to the developer.
+
+## Getting Started
+
+To start the EasyEnvPreview server, you have two options:
+
+### Docker Setup
+
+Prerequisites:
+
+- Docker and Docker Compose installed
+
+Steps:
+
+1. Clone the repository 
+2. Navigate to the project directory
+3. Run `docker-compose up -d`
+4. Access the application at `http://localhost:8080`
+
+### Local Setup 
+
+Prerequisites:
+
+- Node.js 20+ 
+- Debian 12 OS
+
+Steps:
+
+1. Clone the repository
+2. Run `npm install` to install dependencies 
+3. Create `.env` file with desired environment variables
+4. Run `npm run dev` to start the dev server
+5. Application will be available at `http://localhost:8080`
+
+### Running Tests
+
+To run all tests:
+
+```bash
+npm run test
+```
+
+To run integration tests only:
+
+```bash 
+npm run test:integration
+```
+
+To run end-to-end tests:
+
+```
+npm run test:e2e
+```
+

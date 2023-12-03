@@ -12,7 +12,6 @@
     - [Diagrams of the system's components and their interactions](#diagrams-of-the-systems-components-and-their-interactions)
   - [III. User Interface](#iii-user-interface)
     - [Description of the user interface and its features](#description-of-the-user-interface-and-its-features)
-    - [Screenshots or diagrams of the user interface](#screenshots-or-diagrams-of-the-user-interface)
     - [Information about the user experience and how it will be designed to meet the needs of the target audience](#information-about-the-user-experience-and-how-it-will-be-designed-to-meet-the-needs-of-the-target-audience)
   - [IV. Security and Privacy](#iv-security-and-privacy)
     - [Overview of the security measures in place, such as authentication and authorization](#overview-of-the-security-measures-in-place-such-as-authentication-and-authorization)
@@ -32,16 +31,17 @@
     - [Summary of the key points from the design document](#summary-of-the-key-points-from-the-design-document)
     - [Discussion of any potential risks or challenges that may arise during the development and deployment of the system](#discussion-of-any-potential-risks-or-challenges-that-may-arise-during-the-development-and-deployment-of-the-system)
     - [Recommendations for future improvements or enhancements to the system](#recommendations-for-future-improvements-or-enhancements-to-the-system)
+  - [Conclusion](#conclusion)
 
 ## I. Introduction
 
-EasyEnvPreview is a web-based application designed to empower users in efficiently managing their repositories. It offers a user-friendly interface for handling different aspects of a repository, including branches. The application allows users to define actions on a configuration file, and the project executes those actions. This approach aims to streamline the app's functionality and avoid scope creep.
+EasyEnvPreview is a web-based application that allows users to define actions to execute on their repositories. Rather than provide management functions directly, it enables users to create their own workflows. This approach aims to streamline the app's functionality and avoid scope creep.
 
 Project Goals:
 
-- Deliver a user-friendly interface for seamlessly managing repositories, aligning with the needs identified in [the user features scope](./SCOPE.md#users).
-- Enable users to efficiently manage their codebase.
+- Deliver a user-friendly interface for seamlessly work with repositories, aligning with the needs identified in [the user features scope](./SCOPE.md#users).
 - Integrate the ability for users to define actions in a configuration file, promoting flexibility and avoiding unnecessary complexity.
+- Predefined actions like changing branches, fetching updates, checking differences.
 - Ensure robust security measures and privacy compliance, prioritizing user data protection.
 - Guarantee scalability and optimal performance in accordance with the outlined user requirements.
 - Provide a high-quality user experience, reflecting the emphasis on user-friendly interactions and efficient repository management. Additionally, facilitate better error reporting to users, promoting improved communication with developers.
@@ -50,7 +50,7 @@ Project Goals:
 
 With EasyEnvPreview, developers easily handle code changes and collaborate through a user-friendly interface.
 
-Developers use the tool to create branches for features or bug fixes, pushing changes, and switching between branches to assess their impact. They run automated tests, report issues to QA for further investigation, and ensure the codebase remains organized.
+Developers create branches for features or bug fixes on their local environment, pushing changes to the origin repository, then in the server we have the server running we can get those changes locally and switching between branches to assess their impact. They run automated tests, report issues to QA for further investigation, and ensure the codebase remains organized.
 
 QA reviews developer changes, ensuring they meet product requirements. They follow developer instructions, run automated tests, and report bugs for resolution.
 
@@ -58,7 +58,7 @@ Product managers review code changes, ensuring alignment with product requiremen
 
 EasyEnvPreview streamlines collaboration, code review, and product alignment for developers, QA, and product managers. Its user-friendly design and essential features enhance team workflows and collaboration.
 
-For more information cheeck [user's scope](./SCOPE.md#users).
+For more information check [user's scope](./SCOPE.md#users).
 
 ## II. Architecture
 
@@ -121,7 +121,7 @@ graph LR
     A -->|Search for Log| C
 ```
 
-This flow diagram shows the interactions between the different components of the system. The frontend component receives incoming requests from users and sends them to the server service for processing. The server service performs actions such as data retrieval, calculation, and storage, and then sends the results back to the frontend component for display to the user. The monitoring and analytics service is responsible for monitoring the system's performance and health, providing alerts and notifications when there are issues or errors. Finally, the logging service is responsible for logging all activity in the system, including user interactions, system events, and error messages.
+This flow diagram shows the interactions between the different components of the system. The frontend component receives incoming requests from users and sends them to the server service for processing. The server service performs actions such as data retrieval, calculation, and storage, and then sends the results back to the frontend component for display to the user. Finally, the logging service is responsible for logging all activity in the system, including user interactions, system events, and error messages.
 
   Here's a mermaid flowchart that represents the process:
 
@@ -172,13 +172,9 @@ This flowchart shows the following steps:
 - Dark mode: The ability to toggle between light and dark modes for better readability and customization. This could be done by adding a button in the top right corner of the page that allows users to switch between light and dark themes. When the user enables dark mode, the application should use a dark background color and light text, and vice versa.
 - Accessibility features: Ensure that the application is accessible to users with disabilities by implementing features such as screen reader support, high contrast mode, and keyboard navigation. This could be done by adding a button in the top right corner of the page that allows users to toggle accessibility settings. When the user enables accessibility settings, the application should use a different color scheme, font size, and layout to make it easier for users with disabilities to navigate and read the content.
 
-### Screenshots or diagrams of the user interface
-
-
-
 ### Information about the user experience and how it will be designed to meet the needs of the target audience
 
-  User Experience (UX) is a critical aspect of any product, including software applications. It refers to the way in which users interact with a system, and the overall experience they have while using it. In the context of this project, we will be designing an application that allows users to create and manage their own personalized playlists based on their music preferences.
+User Experience (UX) is a critical aspect of any product, including software applications. It refers to the way in which users interact with a system, and the overall experience they have while using it. In the context of this project, we will be designing an application that allows users to create and manage their own personalized playlists based on their music preferences.
 
 To ensure that our application meets the needs of our target audience, we will focus on creating a user-friendly interface that is easy to navigate and understand. We will also prioritize usability and accessibility, ensuring that our application can be used by people with disabilities and different levels of technical expertise.
 
@@ -426,11 +422,18 @@ Based on the current state of the system, here are some recommendations for futu
 
 1. Implement a more robust security framework: The current security framework is basic and could be improved by implementing additional security measures such as encryption, access controls, and intrusion detection systems.
 2. Enhance user authentication and authorization: The system should have a more secure user authentication and authorization mechanism to ensure that only authorized users can access the system.
-3. Implement a scalable database architecture: The current database architecture is not scalable and could be improved by implementing a more robust and flexible database management system such as a NoSQL or NewSQL database.
-4. Enhance data analytics and reporting: The system should have better data analytics and reporting capabilities to provide insights into the performance of the system and the needs of users.
-5. Implement a more intuitive user interface: The current user interface is not very intuitive and could be improved by using more modern design principles and user-centered design methodologies.
-6. Enhance mobile accessibility: The system should have better mobile accessibility to ensure that users can access the system from their mobile devices.
-7. Implement a more robust backup and recovery mechanism: The current backup and recovery mechanism is not very robust and could be improved by implementing a more comprehensive and automated backup and recovery process.
-8. Enhance data privacy and security: The system should have better data privacy and security measures to ensure that user data is protected from unauthorized access or breaches.
-9. Implement a more flexible workflow management system: The current workflow management system is not very flexible and could be improved by implementing a more robust and flexible workflow management system.
-10. Enhance integration with other systems: The system should have better integration with other systems to ensure that it can work seamlessly with other systems and tools.
+3. Enhance data analytics and reporting: The system should have better data analytics and reporting capabilities to provide insights into the performance of the system and the needs of users.
+4. Implement a more intuitive user interface: The current user interface is not very intuitive and could be improved by using more modern design principles and user-centered design methodologies.
+5. Enhance mobile accessibility: The system should have better mobile accessibility to ensure that users can access the system from their mobile devices.
+6. Enhance data privacy and security: The system should have better data privacy and security measures to ensure that user data is protected from unauthorized access or breaches.
+7. Implement a more flexible workflow management system: The current workflow management system is not very flexible and could be improved by implementing a more robust and flexible workflow management system.
+8.  Enhance integration with other systems: The system should have better integration with other systems to ensure that it can work seamlessly with other systems and tools.
+9.  Improve the queue/session system, for example close the user session after some time of inactivity.
+10. Transitioning to a more robust authentication method, such as JSON Web Tokens (JWT), to enhance security and user management.
+11. Implement a URL proxy mechanism to serve each repository in a different page under the same URL.
+12. Introduce rate limiting for API calls to mitigate potential abuse or unintentional high traffic. Establish a rate limit threshold based on expected usage.
+13. Enhance the user interface to better handle long texts or dynamic text being streamed during actions.
+
+## Conclusion
+
+By focusing on user-defined actions rather than management functions, EasyEnvPreview provides flexibility while maintaining security and privacy. The component architecture enables scalability. Future enhancements like improve the queue system would further improve workflows.
