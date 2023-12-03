@@ -1,8 +1,37 @@
 # EasyEnvPreview
 
-Introducing EasyEnvPreview, a web application focused on enabling developers and QA engineers to easily switch Git branches and run tests across multiple repositories to validate code changes.
+<!-- PROJECT SHIELDS -->
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues-open][issues-open-shield]][issues-url]
+[![Issues-closed][issues-closed-shield]][issues-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![contributions welcome][contributions-welcome]][issues-url]
 
-Our developers are excited about the ability to define the correct branches and wait for the actions to run without having to worry about slow machines or internet connectivity issues. This tool is perfect for teams that want to streamline their workflow and improve productivity.
+<!-- PROJECT LOGO -->
+
+|                                              EasyEnvPreview                                              |
+| :------------------------------------------------------------------------------------------------------: |
+|                                              ![app-icon][]                                               |
+| A web application focused on enabling developers and QA engineers to easily switch Git branches and run tests across multiple repositories to validate code changes |
+|                          [🐞 Report a bug or 🙋‍♂️ request a feature][issues-url]                           |
+
+- [EasyEnvPreview](#easyenvpreview)
+  - [The project](#the-project)
+  - [Best Practices for Defining Actions](#best-practices-for-defining-actions)
+  - [Using the UI](#using-the-ui)
+  - [Getting Started](#getting-started)
+    - [Docker Setup](#docker-setup)
+    - [Local Setup](#local-setup)
+    - [Running Tests](#running-tests)
+- [Author](#author)
+- [Contributing](#contributing)
+- [Show your support](#show-your-support)
+- [License](#license)
+
+## The project
+
+This tool is perfect for teams that want to streamline their workflow and improve productivity.
 
 We understand that some of our users may have limited experience with GitHub, so we've designed this tool to be user-friendly and accessible to everyone. Our tool only works with the configuration TOML and valid terminal scripts in bash, which means you can easily integrate it with your existing workflows and tools.
 
@@ -98,3 +127,57 @@ To run end-to-end tests:
 npm run test:e2e
 ```
 
+# Author
+
+|              Picture               |                                                               Contact                                                               | Role |
+| :--------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------: | ---- |
+|    [Victor Peña][victor-github]    | ![email-icon][] Email me to [victordev2002@gmail.com][victor-email] / ![linkedin-icon][] Connect to [my Linkedin][victor-linkedin]  |  Mantainer
+|          ![victor-pic][]           |                                                 Mid Senior Developer                                                 |
+|   [Israel Laguan][author-github]   | ![email-icon][] Email me to [contact@israellaguan.com][author-email] / ![linkedin-icon][] Connect to [my Linkedin][author-linkedin] | Mantainer
+|          ![author-pic][]           |                                                  Senior Developer                                                  |
+
+# Contributing
+
+[![contributions welcome][contributions-welcome]][issues-url]
+
+🤝 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page][issues-url].
+
+# Show your support
+
+🤗 Give a ⭐️ if you like this project!
+
+Icons from:
+
+<a href="https://icons8.com/icon/13917/full-image">Icons8</a>
+
+# License
+
+[![License][badge-license]](http://badges.mit-license.org)
+
+📝 This project is licensed under the [MIT](LICENSE)\
+Feel free to fork this project and improve it
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[contributors-shield]: https://img.shields.io/github/contributors/TeamNovaSoft/qa-exposed-server?style=for-the-badge
+[contributors-url]: https://github.com/TeamNovaSoft/qa-exposed-server/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/TeamNovaSoft/qa-exposed-server?style=for-the-badge
+[forks-url]: https://github.com/TeamNovaSoft/qa-exposed-server/network/members
+[stars-shield]: https://img.shields.io/github/stars/TeamNovaSoft/qa-exposed-server?style=for-the-badge
+[stars-url]: https://github.com/TeamNovaSoft/qa-exposed-server/stargazers
+[issues-open-shield]: https://img.shields.io/github/issues/TeamNovaSoft/qa-exposed-server?style=for-the-badge
+[issues-url]: https://github.com/TeamNovaSoft/qa-exposed-server/issues
+[issues-closed-shield]: https://img.shields.io/github/issues-closed/TeamNovaSoft/qa-exposed-server?style=for-the-badge
+[contributions-welcome]: https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=for-the-badge
+[badge-license]: https://img.shields.io/:license-mit-blue.svg?style=for-the-badge
+[app-icon]: https://img.icons8.com/external-yogi-aprelliyanto-outline-color-yogi-aprelliyanto/32/external-preview-image-coding-and-programming-yogi-aprelliyanto-outline-color-yogi-aprelliyanto.png
+[author-pic]: https://avatars2.githubusercontent.com/u/36519478?s=460&v=4
+[author-github]: https://israel-laguan.github.io
+[author-linkedin]: https://www.linkedin.com/in/israellaguan
+[author-email]: mailto:contact@israellaguan.com
+[linkedin-icon]: https://img.icons8.com/color/20/000000/linkedin.png
+[email-icon]: https://img.icons8.com/color/20/000000/message-squared.png
+[app-icon]: docs/icon.png
+[victor-github]: https://github.com/Katsu08
+[victor-pic]: https://avatars.githubusercontent.com/u/66505715?v=4
+[victor-email]: mailto:victordev2002@gmail.com
+[victor-linkedin]: https://www.linkedin.com/in/v%C3%ADctor-pe%C3%B1a-348a3918a/
