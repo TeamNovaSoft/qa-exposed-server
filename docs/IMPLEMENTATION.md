@@ -115,6 +115,5 @@ Nginx reverse proxy for routing requests in production.
 
 - `GET /api/repositories/{repositoryId}/actions`: Retrieve a list of all possible actions available for a specific repository.
 - `POST /api/repositories/{repositoryId}/actions/pull`: Trigger pulling the latest changes for a repository.
-- `POST /api/repositories/{repositoryId}/actions/run-tests`: Execute tests for the repository.
 - `POST /api/repositories/{repositoryId}/actions/preview`: Start a dynamic environment preview for the repository.
 - `POST /api/repositories/{repositoryId}/actions/run/{actionId}`: Execute a custom action on a specified repository.
