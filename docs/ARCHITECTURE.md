@@ -433,6 +433,7 @@ Based on the current state of the system, here are some recommendations for futu
 11. Implement a URL proxy mechanism to serve each repository in a different page under the same URL.
 12. Introduce rate limiting for API calls to mitigate potential abuse or unintentional high traffic. Establish a rate limit threshold based on expected usage.
 13. Enhance the user interface to better handle long texts or dynamic text being streamed during actions.
+14. Implementation of role-based management. This feature would allow administrators to define specific roles with associated permissions, determining which commands each role is permitted to execute. This additional layer of security would provide finer control over the actions users can perform on the server.
 
 ## Conclusion
 

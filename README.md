@@ -33,15 +33,17 @@
 
 This tool is perfect for teams that want to streamline their workflow and improve productivity.
 
-We understand that some of our users may have limited experience with GitHub, so we've designed this tool to be user-friendly and accessible to everyone. Our tool only works with the configuration TOML and valid terminal scripts in bash, which means you can easily integrate it with your existing workflows and tools.
+We understand that some of our users may have limited experience with GitHub, so we've designed this tool to be user-friendly and accessible to everyone. Our tool only works with a configuration file and valid terminal scripts in bash, which means you can easily integrate it with your existing workflows and tools.
 
 The core goal is to provide a robust server environment where users can switch Git branches, execute tests, and preview dynamic renditions of the codebase. This alleviates issues with slow local machines and networks.
 
 The target users are primarily members of QA teams, with an expected 2-10 repositories connected, each with around 5 branches typically.
 
-Key features include branch switching, test running, and dynamic previews. Custom terminal commands can also be configured as actions. The app uses a separate API layer instead of direct GitHub integration.
+Key features include branch switching, test running, and dynamic previews. Custom terminal commands can also be configured as actions. Unlike a direct GitHub integration, this project does not utilize any external API for GitHub or any other provider. Instead, users are required to define any necessary integrations within the scripts themselves.
 
-Sessions expire after 15 minutes to 2 hours of inactivity. Strict data privacy practices are followed, with no PII collected or stored. Logging is to local text files, with a basic health check endpoint for monitoring.
+Sessions expire after 15 minutes to 2 hours of inactivity. Strict data privacy practices are followed, with no Personally Identifiable Information (PII) collected or stored. Logging is directed to local text files, and a basic health check endpoint is provided for monitoring.
+
+It's important to note that direct terminal commands are not evaluated from the website. Instead, only pre-programmed scripts can be executed. This approach enhances security by preventing users from executing potentially dangerous commands directly on the server's terminal. This design ensures a controlled and secure environment for executing predefined actions.
 
 In addition, we've made sure that our tool is easy to set up and use, so you can get started quickly and start enjoying the benefits of a centralized server. We're confident that EasyEnvPreview will be a valuable asset to your team and help you streamline your workflows.
 
@@ -90,14 +92,14 @@ Steps:
 1. Clone the repository 
 2. Navigate to the project directory
 3. Run `docker-compose up -d`
-4. Access the application at `http://localhost:8080`
+4. Access the application at `http://localhost:8080` or the one configured on the `.env`
 
 ### Local Setup 
 
 Prerequisites:
 
 - Node.js 20+ 
-- Debian 12 OS
+- git
 
 Steps:
 
@@ -105,7 +107,7 @@ Steps:
 2. Run `npm install` to install dependencies 
 3. Create `.env` file with desired environment variables
 4. Run `npm run dev` to start the dev server
-5. Application will be available at `http://localhost:8080`
+5. Application will be available at `http://localhost:8080` or the one configured on the `.env`
 
 ### Running Tests
 
