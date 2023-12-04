@@ -82,7 +82,6 @@ Nginx reverse proxy for routing requests in production.
 
 ###### Logic Code
 
-
 - **Utility Components:**
   Components for utility functions like formatting dates, handling text truncation, etc.
 
