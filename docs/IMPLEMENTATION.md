@@ -5,7 +5,7 @@ EasyEnvPreview will utilize the following technologies:
 ## Backend
 
 Node.js (versions 21 and 20 LTS) with the Express web framework for request routing and API endpoint handling.
-Debian 12 for the production Linux server environment.
+Debian 12 for the production Linux server environment as primary target for deployment, but should work in any system that works with Node.js 20 or superior.
 Docker and Docker Compose used in development for consistency with production environments.
 Bash scripts executed via the terminal for user-defined actions.
 Helmet, rate limiting middlewares, Winston logging, and Yup validation in Express.
