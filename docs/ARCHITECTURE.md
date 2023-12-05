@@ -17,17 +17,13 @@
     - [Overview of the security measures in place, such as authentication and authorization](#overview-of-the-security-measures-in-place-such-as-authentication-and-authorization)
     - [Description of how data is encrypted and stored](#description-of-how-data-is-encrypted-and-stored)
     - [Information about how the system will comply with relevant privacy regulations, such as GDPR or CCPA](#information-about-how-the-system-will-comply-with-relevant-privacy-regulations-such-as-gdpr-or-ccpa)
-  - [V. Performance and Scalability](#v-performance-and-scalability)
-    - [Description of the performance characteristics of the system, such as response time and throughput](#description-of-the-performance-characteristics-of-the-system-such-as-response-time-and-throughput)
-    - [Information about how the system will be designed to scale horizontally and vertically](#information-about-how-the-system-will-be-designed-to-scale-horizontally-and-vertically)
-    - [Diagrams of the system's infrastructure and how it will be deployed in a production environment](#diagrams-of-the-systems-infrastructure-and-how-it-will-be-deployed-in-a-production-environment)
-  - [VI. Testing and Quality Assurance](#vi-testing-and-quality-assurance)
+  - [V. Testing and Quality Assurance](#v-testing-and-quality-assurance)
     - [Overview of the testing process and how it will be conducted](#overview-of-the-testing-process-and-how-it-will-be-conducted)
     - [Information about the types of tests that will be performed, such as unit tests, integration tests, and end-to-end tests](#information-about-the-types-of-tests-that-will-be-performed-such-as-unit-tests-integration-tests-and-end-to-end-tests)
-  - [VII. Deployment and Maintenance](#vii-deployment-and-maintenance)
+  - [VI. Deployment and Maintenance](#vi-deployment-and-maintenance)
     - [Description of the deployment process and how it will be automated](#description-of-the-deployment-process-and-how-it-will-be-automated)
     - [Information about how the system will be maintained and updated](#information-about-how-the-system-will-be-maintained-and-updated)
-  - [VIII. Conclusion](#viii-conclusion)
+  - [VII. Conclusion](#vii-conclusion)
     - [Summary of the key points from the design document](#summary-of-the-key-points-from-the-design-document)
     - [Discussion of any potential risks or challenges that may arise during the development and deployment of the system](#discussion-of-any-potential-risks-or-challenges-that-may-arise-during-the-development-and-deployment-of-the-system)
     - [Recommendations for future improvements or enhancements to the system](#recommendations-for-future-improvements-or-enhancements-to-the-system)
@@ -192,10 +188,14 @@ Overall, our goal is to create a user experience that is both intuitive and enjo
    
 The security and privacy of our application are of utmost importance. To ensure that sensitive data is protected, we have implemented the following measures:
 
-Authentication and Authorization: We use basic authentication with a username and password to secure access to our application. This ensures that only authorized users can access the application and perform actions on behalf of the user.
-Internal Communication: All communication between the server and the backend is internal to the server, and not exposed to the outside world. This means that any sensitive data or credentials are not transmitted over the internet.
-Key Management: We do not store any keys in any form, and we take appropriate measures to ensure that they are not compromised.
+- Authentication and Authorization: We use basic authentication with a username and password to secure access to our application. This ensures that only authorized users can access the application and perform actions on behalf of the user.
+- Key Management: We do not store any keys in any form, and we take appropriate measures to ensure that they are not compromised.
 Logging: We use logging to track all activity on our application, but we have implemented measures to prevent critical information from being exposed in the logs.
+- Internal Communication: All communication between the user interface (app) and the backend is facilitated internally within the server. The app, which is the frontend interacting with users, communicates with the backend to request actions. The backend, in turn, contains the endpoints responsible for interacting with predefined scripts on the server.
+
+It's important to note that the server, in this context, refers to the computer or machine where the scripts are executed. The backend acts as an intermediary, handling user requests from the app and triggering the corresponding actions on the server. This ensures that sensitive data or credentials are not transmitted over the internet, enhancing security.
+
+If a user chooses an action through the app, the backend orchestrates the execution of the corresponding script on the server, maintaining a secure and controlled environment for user interactions.
 
 Overall, our security and privacy measures are designed to protect sensitive data and ensure that our application is secure and reliable.
 
@@ -209,71 +209,23 @@ Logs are not saving sensitive information, as they only contain non-sensitive da
 
 To protect against data breaches, we have implemented a robust incident response plan that includes procedures for responding to security incidents, including data breaches. We also regularly perform vulnerability assessments and penetration testing to identify and address any weaknesses in our systems.
 
-Overall, our approach to data encryption and storage is designed to provide a high level of security and privacy for our users' data, while also ensuring that the application is highly available and scalable.
+Overall, our approach is designed to provide a high level of security and privacy for our users' data, while also ensuring that the application is highly available and scalable.
 
 ### Information about how the system will comply with relevant privacy regulations, such as GDPR or CCPA
 
 To ensure that our system complies with relevant privacy regulations, we will take the following steps:
 
-1. Implement data minimization principles: We will only collect and store the minimum amount of personal data necessary to provide the service.
-2. Provide transparent information about data collection and use: We will be transparent about how we collect, use, and share personal data, and provide users with control over their data through features such as data deletion and privacy settings.
-3. Use secure data storage practices: We will ensure that all personal data is stored in a secure manner, using encryption and other security measures to protect against unauthorized access or disclosure.
-4. Comply with applicable laws and regulations: We will comply with all relevant privacy laws and regulations, such as the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA), and ensure that our data protection practices are in line with these requirements.
-5. Provide users with access to their personal data: We will provide users with access to their personal data, allowing them to view, correct, or delete it as needed.
-6. Implement data protection by design and by default: We will implement data protection principles into our development process, including data minimization, data protection by design, and data protection by default.
-7. Provide users with control over their data: We will provide users with control over their personal data, allowing them to make decisions about how it is collected, used, and shared.
-8. Continuously monitor and evaluate our privacy practices: We will continuously monitor and evaluate our privacy practices, making sure that they are compliant with relevant laws and regulations, and taking steps to improve our data protection practices as needed.
+1. Implement data minimization principles: Our system will only collect and store the minimum amount of personal data necessary to provide the service. Importantly, we do not collect any data about end-users' interactions with the program.
+2. Provide transparent information about data collection and use: We are committed to transparency in how we handle personal data. Users will be informed about the limited data collection that occurs, and they will have control over their data through features such as data deletion and privacy settings.
+3. Use secure data storage practices: All personal data is stored locally on the host computer running the project. We employ encryption and other security measures to ensure that data is stored securely, protecting against unauthorized access or disclosure.
+4. Comply with applicable laws and regulations: We commit to complying with all relevant privacy laws and regulations, such as GDPR and CCPA. Our data protection practices align with these requirements.
+5. Provide users with access to their personal data: Users will have access to their personal data stored locally, allowing them to view, correct, or delete it as needed.
+6. Implement data protection by design and by default: Data protection principles, including data minimization, are integrated into our development process. We prioritize data protection by design and by default.
+7. Provide users with control over their data: Users will have granular control over their personal data, making decisions about how it is collected, used, and shared.
+8. Continuously monitor and evaluate our privacy practices: We are committed to continuously monitoring and evaluating our privacy practices. This ensures ongoing compliance with relevant laws and regulations, and we will take proactive steps to improve our data protection practices as needed.
+9. By implementing these measures, we not only comply with relevant privacy regulations but also ensure that our users' personal information remains secure. Importantly, our commitment to data minimization means we do not collect any information about end-users' actions within the program, contributing to a privacy-first approach.
 
-By implementing these measures, we can ensure that our system is in compliance with relevant privacy regulations, such as GDPR and CCPA, and protect the personal information of our users.
-
-## V. Performance and Scalability
-
-### Description of the performance characteristics of the system, such as response time and throughput
-
-The performance and scalability of the system will be evaluated based on the following metrics:
-
-1. Response Time: The system should be able to respond to user requests in a timely manner, with response times below 500ms for most requests.
-2. Throughput: The system should be able to handle a high volume of concurrent users and requests without experiencing performance degradation.
-3. Latency: The system should be able to handle requests from different geographic locations with low latency, ensuring that the user experience is consistent across all regions.
-4. Resource Utilization: The system should be optimized for resource utilization, with minimal resource usage and efficient use of resources such as CPU, memory, and storage.
-5. Scalability: The system should be able to scale horizontally and vertically as needed to handle increasing traffic and user growth.
-6. Performance under Load Testing: The system should perform well under load testing scenarios, with the ability to handle a large volume of requests without experiencing performance degradation.
-7. Performance during High Traffic Hours: The system should be able to handle high traffic hours without experiencing performance degradation, ensuring that the user experience is consistent and reliable.
-8. Performance during Low Traffic Hours: The system should also be able to handle low traffic hours without experiencing performance degradation, ensuring that the system is not over-provisioned or under-utilized.
-9. Performance in Different Regions: The system should be able to handle requests from different geographic locations with low latency and consistent performance.
-10. Performance under Different Workloads: The system should be able to handle a variety of workloads, including real-time analytics, batch processing, and machine learning tasks, without experiencing performance degradation.
-
-### Information about how the system will be designed to scale horizontally and vertically
-
-To ensure that the system can scale horizontally and vertically as needed, we will design it with the following features:
-
-1. Horizontal Scaling: The system will use a load balancer to distribute incoming requests across multiple instances of the application running on different servers. This will allow the system to handle an increasing number of users without overloading any one server.
-2. Vertical Scaling: The system will use auto-scaling to automatically add or remove resources (such as CPU, memory, and disk space) based on the workload. This will ensure that the system can handle increased load by adding more resources as needed, rather than relying on manual intervention.
-3. Multi-AZ Deployment: The system will be deployed across multiple Availability Zones (AZs) in a single region to ensure high availability and reduce latency. This will also provide redundancy and improve fault tolerance.
-4. Scaling based on Workload: The system will use a workload-based scaling approach, where the number of instances is determined by the current workload and the capacity of the system. This will ensure that the system can handle varying levels of traffic and workloads without overloading or underutilizing resources.
-5. Scaling based on Resource Utilization: The system will use a resource-based scaling approach, where the number of instances is determined by the current utilization of resources such as CPU, memory, and disk space. This will ensure that the system can handle varying levels of resource usage without overloading or underutilizing resources.
-6. Scaling based on Business Needs: The system will be designed to scale based on business needs, such as seasonal fluctuations in traffic or changes in user behavior. This will allow the system to adapt to changing conditions and ensure that it can handle the expected workload.
-7. Scaling based on Cloud Provider Limits: The system will be designed to take into account the limits of the cloud provider, such as maximum number of instances or maximum amount of resources per instance. This will ensure that the system does not exceed these limits and is able to scale safely and efficiently.
-8. Scaling based on Cost Optimization: The system will be designed to optimize cost by scaling down during periods of low usage and scaling up during periods of high usage. This will help to minimize costs and ensure that the system is always running at a optimal level.
-9. Scaling based on Security: The system will be designed to ensure that it can scale securely, with appropriate security measures in place to protect against unauthorized access or data breaches.
-10. Scaling based on Monitoring and Maintenance: The system will be designed to monitor and maintain itself, with automated tools and processes in place to detect and respond to issues. This will ensure that the system is always running at a optimal level and can handle unexpected events.
-
-### Diagrams of the system's infrastructure and how it will be deployed in a production environment
-
-Deployment Diagram
-
-```mermaid
-graph LR
-    A[Developer] --> B[Merge Code into Master]
-    B --> C[Test and Linter]
-    C --> D[Build Static Image]
-    D --> E[Deploy to Client]
-    E --> F[Deploy to Server]
-```
-
-In this diagram, the developer merges code into the master branch, which triggers the test and linter process. If the tests pass, a static image is built. The static image is then deployed to the client and server. This high-level view of the deployment process provides a general overview of the steps involved in deploying an application without getting too detailed into the specifics of each step.
-
-## VI. Testing and Quality Assurance
+## V. Testing and Quality Assurance
 
 ### Overview of the testing process and how it will be conducted
 
@@ -332,11 +284,11 @@ We will use a tool such as JMeter or Gatling to write and run our regression tes
  
 We will use a tool such as UserZoom or TestRail to write and run our acceptance tests.
 
-## VII. Deployment and Maintenance
+## VI. Deployment and Maintenance
 
 ### Description of the deployment process and how it will be automated
 
-the user interface is the front-end of the application, and it communicates with the load balancer. The load balancer distributes incoming requests across multiple instances of the web application running on Docker containers. Each container runs a different instance of the web application.
+The user interface is the front-end of the application, and it communicates with the load balancer. The load balancer distributes incoming requests across multiple instances of the web application running on Docker containers. Each container runs a different instance of the web application.
 
 ### Information about how the system will be maintained and updated
 
@@ -384,7 +336,7 @@ Continuous improvement: The system should be continuously improved to improve pe
 - Implementing new technologies and tools as needed
 - Continuously monitoring and updating the system's configuration and settings to ensure that it remains secure and compliant.
 
-## VIII. Conclusion
+## VII. Conclusion
 
 ### Summary of the key points from the design document
 
