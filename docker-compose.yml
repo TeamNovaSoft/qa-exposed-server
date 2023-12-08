@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  app:
+    image: node:20-alpine
+    command: ["npm", "--silent", "${NPM_COMMAND:-start}"]
+    ports:
+      - "${PORT}:${PORT}"
+    environment:
+      - PORT=${PORT}
+      - NODE_ENV=${NODE_ENV}
+    volumes:
+      - "./client:/app/client"
+      - "./server:/app/server"
+      - "./public:/app/public"
+
+volumes:
+  client:
+  server:
+  public:
