@@ -92,7 +92,7 @@ Steps:
 1. Clone the repository 
 2. Navigate to the project directory
 3. Run `docker-compose up -d`
-4. Access the application at `http://localhost:8080` or the one configured on the `.env`
+4. Access the application at `http://localhost:PORT` (replace `PORT` with the actual port defined in the `.env` file).
 
 ### Local Setup 
 
