@@ -23,26 +23,3 @@ COPY .env .env
 EXPOSE $PORT
 
 CMD ["npm", "start"]
-
-
-# FROM node:20-alpine AS test
-
-# WORKDIR /app
-
-# COPY --from=build /app/node_modules ./node_modules
-# COPY . .
-
-# EXPOSE 3000
-
-# CMD ["npm", "test"]
-
-# FROM node:20-alpine AS dev
-
-# WORKDIR /app
-
-# COPY --from=build /app/node_modules ./node_modules
-# COPY . .
-
-# EXPOSE 3000
-
-# CMD ["npm", "run", "dev"]
