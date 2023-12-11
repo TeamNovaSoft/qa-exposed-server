@@ -2,17 +2,19 @@ version: "3.8"
 
 services:
   app:
-    image: node:20-alpine
-    command: ["npm", "--silent", "${NPM_COMMAND:-start}"]
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: start
+    working_dir: /app
     ports:
       - "${PORT}:${PORT}"
     environment:
-      - PORT=${PORT}
-      - NODE_ENV=${NODE_ENV}
+      - PORT=${PORT:-3000}
+      - NODE_ENV=${NODE_ENV:-development}
     volumes:
-      - "./client:/app/client"
-      - "./server:/app/server"
-      - "./public:/app/public"
+      - ./:/app
+      - ${PROJECT_BASE_FOLDER}:${PROJECT_BASE_FOLDER}:ro
 
 volumes:
   client:
