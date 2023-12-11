@@ -1,4 +1,4 @@
-const { repositories } = require('../config');
+const { repositories } = require('../../config');
 const { getCurrentBranch } = require('../utils/git');
 
 const renderHomeView = (req, res) => {

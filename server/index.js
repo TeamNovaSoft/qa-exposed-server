@@ -5,14 +5,16 @@ const { create } = require('express-handlebars');
 const { renderHomeView } = require('./controllers/home');
 
 const handlebars = create({
-    layoutsDir: __dirname + '/views/layouts',
+    layoutsDir: './client/layouts',
     extname: ".hbs",
 })
 
 app.engine('hbs', handlebars.engine);
 
 app.set('view engine', 'hbs');
-app.use(express.static('public'))
+app.set('views', './client');
+app.enable('view cache');
+app.use(express.static('./public'))
 app.get('/', renderHomeView);
 
 app.listen(port, () => console.log(`App listening to port ${port}`));
