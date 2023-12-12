@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: start
+    working_dir: /app
+    ports:
+      - "${PORT}:${PORT}"
+    environment:
+      - PORT=${PORT:-3000}
+      - NODE_ENV=${NODE_ENV:-development}
+    volumes:
+      - ./:/app
+      - ${PROJECT_BASE_FOLDER}:${PROJECT_BASE_FOLDER}:ro
+
+volumes:
+  client:
+  server:
+  public:

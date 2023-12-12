@@ -92,7 +92,7 @@ Steps:
 1. Clone the repository 
 2. Navigate to the project directory
 3. Run `docker-compose up -d`
-4. Access the application at `http://localhost:8080` or the one configured on the `.env`
+4. Access the application at `http://localhost:PORT` (replace `PORT` with the actual port defined in the `.env` file).
 
 ### Local Setup 
 
@@ -107,7 +107,7 @@ Steps:
 2. Run `npm install` to install dependencies 
 3. Create `.env` file with desired environment variables
 4. Run `npm run dev` to start the dev server
-5. Application will be available at `http://localhost:8080` or the one configured on the `.env`
+5. Access the application at `http://localhost:3000` or replace 3000 with the actual port defined in the `.env` file.
 
 ### Running Tests
 
