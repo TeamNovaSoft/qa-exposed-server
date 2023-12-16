@@ -5,7 +5,7 @@
     "[javascript]": {
         "editor.defaultFormatter": "stylelint.vscode-stylelint"
     },
-    "cSpell.language": "en, es, fullstack",
+    "cSpell.language": "en, fullstack",
     "cSpell.allowCompoundWords": true,
     "cSpell.languageSettings": [
         {
