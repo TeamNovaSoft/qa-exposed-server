@@ -6,6 +6,10 @@
         "editor.defaultFormatter": "stylelint.vscode-stylelint"
     },
     "cSpell.language": "en, fullstack",
+    "[handlebars]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "files.insertFinalNewline": false
+    },
     "cSpell.allowCompoundWords": true,
     "cSpell.languageSettings": [
         {

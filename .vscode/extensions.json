@@ -4,6 +4,7 @@
         "rbalet.code-spell-checker-fullstack",
         "stylelint.vscode-stylelint",
         "dbaeumer.vscode-eslint",
-        "usernamehw.errorlens"
+        "usernamehw.errorlens",
+        "esbenp.prettier-vscode"
     ]
   }
