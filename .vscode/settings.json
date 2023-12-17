@@ -1,0 +1,53 @@
+{
+    "[css]": {
+        "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    },
+    "cSpell.language": "en, fullstack",
+    "[handlebars]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "files.insertFinalNewline": false
+    },
+    "cSpell.allowCompoundWords": true,
+    "cSpell.languageSettings": [
+        {
+            "languageId": "*",
+            "dictionaries": [
+                "fullstack"
+            ]
+        }
+    ],
+    "cSpell.userWords": [],
+    "cSpell.words": [],
+    "css.validate": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.fixAll.stylelint": "explicit"
+    },
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.cursorBlinking": "smooth",
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true,
+    "eslint.format.enable": true,
+    "files.autoSave": "afterDelay",
+    "files.insertFinalNewline": true,
+    "files.eol": "\n",
+    "files.trimFinalNewlines": true,
+    "html.autoClosingTags": true,
+    "javascript.autoClosingTags": true,
+    "javascript.suggest.autoImports": true,
+    "javascript.format.enable": false,
+    "javascript.validate.enable": true,
+    "search.exclude": {
+        "**/*.log": true
+    },
+    "stylelint.validate": [
+        "css"
+    ],
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "streetsidesoftware.code-spell-checker",
+        "rbalet.code-spell-checker-fullstack",
+        "stylelint.vscode-stylelint",
+        "dbaeumer.vscode-eslint",
+        "usernamehw.errorlens",
+        "esbenp.prettier-vscode"
+    ]
+  }

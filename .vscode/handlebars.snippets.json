@@ -1,0 +1,51 @@
+{
+    "if": {
+        "prefix": "if",
+        "body": "{{#if ${1:condition}}}\n\t${0}\n{{/if}}",
+        "description": "IF"
+    },
+    "ifel": {
+        "prefix": "ifel",
+        "body": "{{#if ${2:condition}}}\n\t${1}\n{{else}}\n\t${0}\n{{/if}}",
+        "description": "IF ELSE"
+    },
+    "each": {
+        "prefix": "each",
+        "body": "{{#each ${1:list} as |${2:alias}|}}\n\t${0}\n{{/each}}",
+        "description": "EACH"
+    },
+    "unless helper": {
+        "prefix": "unless",
+        "body": [
+            "{{#unless ${1:cond}}}",
+            "${0}",
+            "{{/unless}}"
+        ],
+        "description": "unless block helper"
+    },
+    "each else helper": {
+        "prefix": "eachelse",
+        "body": [
+            "{{#each ${1:list}}}",
+            "${0}",
+            "{{else}}",
+            "$0",
+            "{{/each}}"
+        ],
+        "description": "each else block helper"
+    },
+    "with helper": {
+        "prefix": "with",
+        "body": [
+            "{{#with ${property}}}",
+            "${0}",
+            "{{/with}}"
+        ],
+        "description": "each block helper"
+    },
+    "partials ": {
+        "prefix": "part",
+        "body": "{{> partial_name}}}",
+        "description": "partials in hbs"
+    }
+}
