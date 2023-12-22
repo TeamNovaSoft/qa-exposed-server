@@ -1,3 +1,5 @@
-{{#each repositories}}
-  <div>Current Branch of {{name}}: {{currentBranch}}</div>
-{{~/each}}
+<div class="repositories grid-auto-fill">
+  {{#each repositories}}
+    {{> repository name=name description=description currentBrach=currentBrach}}
+  {{~/each}}
+</div>

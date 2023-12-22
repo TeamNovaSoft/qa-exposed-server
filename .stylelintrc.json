@@ -216,10 +216,20 @@
         "selector-pseudo-element-no-unknown": true,
         "selector-type-case": "lower",
         "selector-type-no-unknown": true,
+        "selector-class-pattern": "^[a-z]+([a-z0-9-]+[a-z0-9]+)*(__[a-z0-9]+([a-z0-9-]+[a-z0-9]+)*)?(--[a-z0-9]+([a-z0-9-]+[a-z0-9]+)*)?$",
         "shorthand-property-no-redundant-values": true,
         "string-no-newline": true,
         "time-min-milliseconds": 10,
         "unit-no-unknown": true,
-        "value-keyword-case": "lower"
+        "value-keyword-case": "lower",
+        "color-function-notation": [
+            "legacy",
+            {
+                "ignore": [
+                    "with-var-inside"
+                ]
+            }
+        ],
+        "alpha-value-notation": "number"
     }
 }
