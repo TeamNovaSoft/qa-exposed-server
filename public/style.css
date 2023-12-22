@@ -1,7 +1,24 @@
-@import url("reset.css");
+@import url("variables.css");
+@import url("styles/utils/buttons.css");
+@import url("styles/utils/reset.css");
+@import url("styles/utils/grid.css");
+@import url("styles/home/home.css");
+@import url("styles/partials/repository.css");
 
 .hidden {
   display: none !important;
+}
+
+.main {
+  max-width: var(--breakpoint-large);
+  margin: 0 auto;
+}
+
+.page-title {
+  max-width: var(--breakpoint-large);
+  margin: 0 auto;
+  padding: var(--spacing-base);
+  text-align: center;
 }
 
 @media (prefers-reduced-motion: reduce) {

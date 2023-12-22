@@ -1,0 +1,31 @@
+button {
+  --button-size: 5px;
+  --hover-bg-color: rgba(var(--color-primary), 0.8);
+  --hover-color: rgb(var(--color-secondary));
+
+  padding: var(--button-size) calc(var(--button-size) * 2);
+  border: var(--border-base);
+  border-radius: var(--border-radius-base);
+  background-color: rgb(var(--color-primary));
+  color: rgb(var(--color-secondary));
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+button.primary {
+  background-color: rgb(var(--color-primary));
+  color: rgb(var(--color-secondary));
+}
+
+button.secondary {
+  --hover-bg-color: rgba(var(--color-secondary), 0.8);
+  --hover-color: rgba(var(--color-primary), 0.8);
+  
+  background-color: rgb(var(--color-secondary));
+  color: rgb(var(--color-primary));
+}
+
+button:hover {
+  background-color: var(--hover-bg-color);
+  color: var(--hover-color);
+}

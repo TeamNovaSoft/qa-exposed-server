@@ -1,0 +1,39 @@
+:root {
+    --background: 255, 255, 255;
+    --color-primary: 0, 0, 0;
+    --color-secondary: 255, 255, 255;
+
+    /* Borders */
+    --border-base: 1px solid rgb(var(--color-primary));
+    --border-radius-base: 3px;
+
+    /* Spacing */
+    --spacing-base: 10px;
+    --spacing-large: 20px;
+    --spacing-xlarge: 40px;
+
+    /* Breakpoints */
+    --breakpoint-small: 600px;
+    --breakpoint-medium: 900px;
+    --breakpoint-large: 1200px;
+
+    /* Font sizes */
+    --font-size-base: 16px;
+    --font-size-large: 24px;
+    --font-size-xlarge: 32px;
+
+    /* Font weights */
+    --font-weight-base: 400;
+    --font-weight-bold: 700;
+
+    /* Line heights */
+    --line-height-base: 1.5;
+    --line-height-large: 1.2;
+    --line-height-xlarge: 1.1;
+
+    /* Shadows */
+    --color-shadow: 0, 0, 0;
+    --shadow-base: 0 0 5px rgba(var(--color-shadow), 0.1);
+    --shadow-large: 0 0 10px rgba(var(--color-shadow), 0.1);
+    --shadow-xlarge: 0 0 15px rgba(var(--color-shadow), 0.1);
+}

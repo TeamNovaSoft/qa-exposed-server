@@ -1,0 +1,6 @@
+.repositories {
+    --grid-item-width: 200px;
+    --grid-gap: var(--spacing-xlarge);
+
+    padding: var(--spacing-base);
+}

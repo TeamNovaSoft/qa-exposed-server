@@ -7,6 +7,7 @@ const { renderHomeView } = require('./controllers/home');
 const handlebars = create({
     layoutsDir: './client/layouts',
     extname: ".hbs",
+    partialsDir: './client/partials',
 })
 
 app.engine('hbs', handlebars.engine);
